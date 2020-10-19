@@ -64,7 +64,6 @@ class PinsController extends AbstractController
         {
             
             $em->flush();
-
             return $this->redirectToRoute('app_home');
         }
 
@@ -74,7 +73,17 @@ class PinsController extends AbstractController
         ]);
     }
 
-   
+    /**
+     * @param Pin $pin
+     * @Route("/pins/{id<[0-9]+>}/delete", name="app_pins_delete", methods={"DELETE"})
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+        public function delete(Pin $pin, EntityManagerInterface $em): Response
+        {
+            $em->remove($pin);
+            $em->flush();
+            return $this->redirectToRoute('app_home');
+        }
 
     /**
      * @Route("/pins/{id<[0-9]+>}", name="app_pins_show")
