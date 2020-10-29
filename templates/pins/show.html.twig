@@ -15,7 +15,7 @@
                     class="text-muted text-decoration-none text-secondary">{{ pin.title() }}</a></h1>
             <p class="text-muted pl-3 pb-3"><small>Submited
                     <time datetime="{{ pin.createdAt|date('Y-m-d H:i') }}">{{ pin.createdAt|ago }}</time>
-                    by [OWNER FULL NAME]</small></p>
+                     by {{ pin.user.fullName }}</small></p>
 
             <p class="pl-3 pb-3">
                 {{ pin.description }}
