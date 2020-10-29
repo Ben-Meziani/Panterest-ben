@@ -35,13 +35,13 @@ background-color: blue;
     @extend .mt-3;
     }
 
-/*     img {
+    img {
         @extend .mb-2;
         @extend .rounded;
         @extend .shadow;
         @extend .img-thumbnail;
 }
- */
+
 .pin img {
     transition: transform 0.3s ease-out;
         &:hover {
