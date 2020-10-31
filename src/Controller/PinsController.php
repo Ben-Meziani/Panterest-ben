@@ -25,7 +25,7 @@ class PinsController extends AbstractController
     }
 
     /** 
-     *@Route("/create", name="app_pins_create", methods={"GET", "POST"})
+     *@Route("/pins/create", name="app_pins_create", methods={"GET", "POST"})
      */
     public function create(Request $request, EntityManagerInterface $em, UserRepository $userRepo): Response
     {

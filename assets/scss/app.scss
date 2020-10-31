@@ -36,10 +36,10 @@ background-color: blue;
     }
 
     img {
-        @extend .mb-2;
+        /* @extend .mb-2;
         @extend .rounded;
         @extend .shadow;
-        @extend .img-thumbnail;
+        @extend .img-thumbnail; */
 }
 
 .pin img {
